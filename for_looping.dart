@@ -17,6 +17,6 @@ void main(){
 
   print('Daftar makanan');
   for(int i=0;i < daftarMakanan.length ; i++){
-    print(daftarMakanan[i]);
+    print( daftarMakanan[i]);
   }
 }
