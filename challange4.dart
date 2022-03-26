@@ -13,10 +13,10 @@ void main(){
   }
 
   print('Jawaban Soal 2');
-  var x = 2;
+  var x = 5;
   for (int k = 0; k < x; k++) {
     var bintang_bintang = '';
-    for (int l = x; l >= k; l--) {
+    for (int l = x; l > k; l--) {
       bintang_bintang = bintang_bintang + '*';
     }
     print(bintang_bintang);
