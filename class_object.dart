@@ -1,16 +1,20 @@
 void main() {
-  RekeningBank rekeningBank = new RekeningBank();
-  rekeningBank.namaPemilik = 'Muhammad iqbal aulia rafi';
-  rekeningBank.namaBank = 'BCA';
-  rekeningBank.saldo = 1000000000000;
+  RekeningBank rekeningIqbal = new RekeningBank();
+  rekeningIqbal.namaPemilik = 'Muhammad iqbal aulia rafi';
+  rekeningIqbal.namaBank = 'BCA';
+  rekeningIqbal.saldo = 1000000000000;
+  rekeningIqbal.cekSaldo();
 
-  rekeningBank.cekSaldo();
+  RekeningBank rekeningAulia = new RekeningBank(
+      namaPemilik: 'Aulia rafi', namaBank: 'MANDRIRI', saldo: 2000000);
 }
 
 class RekeningBank {
-  String namaPemilik = '';
-  String namaBank = '';
-  int saldo = 0;
+  String namaPemilik;
+  String namaBank;
+  int saldo;
+
+  RekeningBank({this.namaPemilik: '', this.namaBank: '', this.saldo: 0});
 
   cekSaldo() {
     print('Saldo saat ini: $saldo');
