@@ -1,17 +1,22 @@
-void main(){
-  
-  String nama= 'Iqbal';
+void main() {
+  /*
+  Arrow function
+
+  tipe namaFungsi(paramter) => return nilai
+
+  */
+
+  String nama = 'Iqbal';
   perkenalan(nama);
 
   int sisi = 10;
   int volume = volumeKubus(sisi);
   print(volume);
+  print(nilaiPhi());
 }
 
-void perkenalan(String nama){
-  print('halo, guys!!. Nama saya $nama');
-}
+void perkenalan(String nama) => print('halo, guys!!. Nama saya $nama');
 
-int volumeKubus(int sisi){
-  return sisi * sisi * sisi;
-}
+int volumeKubus(int sisi) => sisi * sisi * sisi;
+
+double nilaiPhi() => 3.14;
