@@ -1,17 +1,17 @@
-import 'dart:ffi';
-
 void main() {
   print('Mobil');
   Mobil avanza = new Mobil(5);
   print(avanza.suaraKlason);
   avanza.jumlahRoda(avanza.roda);
+  avanza.berjalan();
 
   print('Motor');
   Motor honda = new Motor(2);
   honda.jumlahRoda(honda.roda);
+  honda.berjalan();
 }
 
-class Kendaraan {
+abstract class Kendaraan {
   String suaraKlason = 'tingtoksss';
 
   void klakson() {
@@ -21,6 +21,8 @@ class Kendaraan {
   void jumlahRoda(int roda) {
     print(roda);
   }
+
+  void berjalan();
 }
 
 class Mobil extends Kendaraan {
@@ -32,6 +34,11 @@ class Mobil extends Kendaraan {
     print('Jumlah roda : $roda');
     super.jumlahRoda(roda);
   }
+
+  @override
+  void berjalan() {
+    print('Mobil berjalan');
+  }
 }
 
 class Motor extends Kendaraan {
@@ -42,5 +49,10 @@ class Motor extends Kendaraan {
   void jumlahRoda(int roda) {
     print('Roda motor: $roda');
     super.jumlahRoda(roda);
+  }
+
+  @override
+  void berjalan() {
+    print('Motor berjalan');
   }
 }
