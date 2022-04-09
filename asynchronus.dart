@@ -1,11 +1,16 @@
-void main() {
-  fetchData();
-  print('menunggu data');
+Future<void> main() async {
+  print(await fetchData());
+  print('data telah selesai diproses');
 }
 
-Future<void> fetchData() {
+Future<String> printData() async {
+  var data = await fetchData();
+  return 'data : $data';
+}
+
+Future<String> fetchData() {
   return Future.delayed(
     Duration(seconds: 2),
-    () => print('fecth data'),
+    () => 'fecth data',
   );
 }
